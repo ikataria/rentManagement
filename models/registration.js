@@ -1,4 +1,4 @@
-const mongoose = require('mogoose')
+const mongoose = require('mongoose')
 
 const RegisterSchema = new mongoose.Schema({
     SGID: {
@@ -18,6 +18,11 @@ const RegisterSchema = new mongoose.Schema({
         unique: true
     },
     phoneVerify: {
+        otp: Number,
+        verified: Boolean,
+        verifiedAt: Date
+    },
+    emailVerify: {
         otp: Number,
         verified: Boolean,
         verifiedAt: Date
